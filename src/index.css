@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ====== Global styles ====== */
+html, body, #app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb; /* Tailwind gray-50 */
+  font-family: 'Inter', sans-serif;
+}
+
+/* ====== Scrollbar Styling ====== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca3af; /* gray-400 */
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280; /* gray-500 */
+}
+
+/* ====== Utility overrides ====== */
+h1, h2, h3, h4 {
+  @apply font-semibold text-gray-800;
+}
+
+button {
+  @apply rounded-xl shadow-sm transition hover:shadow-md;
+}
+
+input, textarea, select {
+  @apply border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500;
+}
